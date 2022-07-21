@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/nuevostyle.css">
+
+    <title>cards</title>
+    
+</head>
+    <body>
+        
+        <button class="toggle-modal">Open modal</button>
+        <div class="modal-container">
+          <div class="modal"></div>
+        </div>
+        <script>
+            const buttonEl = document.querySelector("button");
+            const modalEl = document.querySelector(".modal-container");
+      
+            const openModal = () => {
+              modalEl.classList.add("open");
+            };
+            const closeModal = (e) => {
+              if (e.target.classList.contains("open"))
+                modalEl.classList.remove("open");
+            };
+      
+            buttonEl.addEventListener("click", openModal);
+            window.addEventListener("click", closeModal);
+          </script>
+
+
+
+        <Article class="card">
+            <img src="./imagenes/programacion.jpg" alt="" class="card_image">
+                <div class="card_data">
+                    <h2 class="card_title">Programación</h2>
+                    <p class="card_description">programadores</p>
+                    <button class="card_btn ">saber mas</button>
+                </div>
+
+        </Article>
+
+
+
+
+    </body>
+
+</html>
